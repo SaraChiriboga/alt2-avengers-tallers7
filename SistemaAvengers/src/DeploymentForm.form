@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="DeploymentForm">
+  <grid id="27dc6" binding="pDeployment" layout-manager="GridLayoutManager" row-count="13" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="20" left="20" bottom="20" right="20"/>
+    <constraints>
+      <xy x="20" y="20" width="444" height="522"/>
+    </constraints>
+    <properties>
+      <background color="-16777216"/>
+      <preferredSize width="650" height="500"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="6b8eb" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="23"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Bold Italic Art" size="18"/>
+          <foreground color="-1"/>
+          <text value="Nombre"/>
+        </properties>
+      </component>
+      <component id="5a268" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="23"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Bold Italic Art" size="18"/>
+          <foreground color="-1"/>
+          <text value="Identificación"/>
+        </properties>
+      </component>
+      <component id="d33f4" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="23"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Bold Italic Art" size="18"/>
+          <foreground color="-1"/>
+          <text value="Misión asignada"/>
+        </properties>
+      </component>
+      <component id="903a4" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="23"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Bold Italic Art" size="18"/>
+          <foreground color="-1"/>
+          <text value="Descripción de la misión"/>
+        </properties>
+      </component>
+      <component id="58805" class="javax.swing.JTextField" binding="nombre">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-11908534"/>
+          <font name="Bahnschrift" size="16"/>
+          <foreground color="-1"/>
+          <horizontalAlignment value="10"/>
+          <margin top="2" left="6" bottom="2" right="6"/>
+        </properties>
+      </component>
+      <component id="de117" class="javax.swing.JTextField" binding="id">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-11908534"/>
+          <font name="Bahnschrift" size="16"/>
+          <foreground color="-1"/>
+          <margin top="2" left="6" bottom="2" right="6"/>
+          <toolTipText value="Debe ser única"/>
+        </properties>
+      </component>
+      <component id="4f876" class="javax.swing.JTextField" binding="mision">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-11908534"/>
+          <font name="Bahnschrift" size="16"/>
+          <foreground color="-1"/>
+          <margin top="2" left="6" bottom="2" right="6"/>
+        </properties>
+      </component>
+      <component id="69a3" class="javax.swing.JTextField" binding="des">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-11908534"/>
+          <font name="Bahnschrift" size="16"/>
+          <foreground color="-1"/>
+          <margin top="2" left="6" bottom="2" right="6"/>
+        </properties>
+      </component>
+      <component id="6e3c9" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="23"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Bold Italic Art" size="18"/>
+          <foreground color="-1"/>
+          <text value="Nivel de peligrosidad"/>
+        </properties>
+      </component>
+      <component id="d3d08" class="javax.swing.JComboBox" binding="peligro">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-11908534"/>
+          <editable value="false"/>
+          <font name="Bahnschrift" size="16"/>
+          <foreground color="-1"/>
+          <model>
+            <item value="1"/>
+            <item value="2"/>
+            <item value="3"/>
+            <item value="4"/>
+            <item value="5"/>
+          </model>
+          <selectedIndex value="-1"/>
+        </properties>
+      </component>
+      <component id="61035" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="23"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Bold Italic Art" size="18"/>
+          <foreground color="-1"/>
+          <text value="Pago mensual"/>
+        </properties>
+      </component>
+      <component id="d0596" class="javax.swing.JTextField" binding="mensual">
+        <constraints>
+          <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="267" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-11908534"/>
+          <font name="Bahnschrift" size="16"/>
+          <foreground color="-1"/>
+          <margin top="2" left="6" bottom="2" right="6"/>
+        </properties>
+      </component>
+      <component id="ab7df" class="javax.swing.JButton" binding="desplegarButton" default-binding="true">
+        <constraints>
+          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="500" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-7462875"/>
+          <borderPainted value="false"/>
+          <focusPainted value="false"/>
+          <font name="Arial Rounded MT Bold" size="18"/>
+          <foreground color="-1"/>
+          <text value="Desplegar"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

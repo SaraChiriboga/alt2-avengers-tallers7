@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ModifForm">
+  <grid id="27dc6" binding="pModif" layout-manager="GridLayoutManager" row-count="11" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="20" left="20" bottom="20" right="20"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="500"/>
+    </constraints>
+    <properties>
+      <background color="-16777216"/>
+      <minimumSize width="400" height="500"/>
+      <preferredSize width="600" height="400"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="b981b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Rounded MT Bold" size="18"/>
+          <foreground color="-1"/>
+          <text value="Nombre"/>
+        </properties>
+      </component>
+      <component id="98292" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="54" height="5"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Arial Rounded MT Bold" size="18"/>
+          <foreground color="-1"/>
+          <text value="Misión"/>
+        </properties>
+      </component>
+      <component id="bd084" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Rounded MT Bold" size="18"/>
+          <foreground color="-1"/>
+          <text value="Descripción de misión"/>
+        </properties>
+      </component>
+      <component id="3d6c0" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Rounded MT Bold" size="18"/>
+          <foreground color="-1"/>
+          <text value="Nivel de peligrosidad"/>
+        </properties>
+      </component>
+      <component id="319f5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Rounded MT Bold" size="18"/>
+          <foreground color="-1"/>
+          <text value="Pago Mensual"/>
+        </properties>
+      </component>
+      <component id="4691b" class="javax.swing.JButton" binding="guardarButton" default-binding="true">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-7462875"/>
+          <borderPainted value="false"/>
+          <focusPainted value="false"/>
+          <font name="Arial Rounded MT Bold" size="18"/>
+          <foreground color="-1"/>
+          <text value="Guardar"/>
+        </properties>
+      </component>
+      <component id="b9e77" class="javax.swing.JTextField" binding="nombre">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-11908534"/>
+          <font name="Arial Rounded MT Bold" size="16"/>
+          <foreground color="-1"/>
+          <margin top="2" left="6" bottom="2" right="6"/>
+        </properties>
+      </component>
+      <component id="92f71" class="javax.swing.JTextField" binding="mision">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-11908534"/>
+          <font name="Arial Rounded MT Bold" size="16"/>
+          <foreground color="-1"/>
+          <margin top="2" left="6" bottom="2" right="6"/>
+        </properties>
+      </component>
+      <component id="bdf38" class="javax.swing.JTextField" binding="descripcion">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-11908534"/>
+          <font name="Arial Rounded MT Bold" size="16"/>
+          <foreground color="-1"/>
+          <margin top="2" left="6" bottom="2" right="6"/>
+        </properties>
+      </component>
+      <component id="ad9c5" class="javax.swing.JComboBox" binding="peligro">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Rounded MT Bold" size="16"/>
+          <foreground color="-11908534"/>
+          <model>
+            <item value="1"/>
+            <item value="2"/>
+            <item value="3"/>
+            <item value="4"/>
+            <item value="5"/>
+          </model>
+          <selectedIndex value="-1"/>
+        </properties>
+      </component>
+      <component id="5d09a" class="javax.swing.JTextField" binding="mensual">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-11908534"/>
+          <font name="Arial Rounded MT Bold" size="16"/>
+          <foreground color="1207959551"/>
+          <margin top="2" left="6" bottom="2" right="6"/>
+        </properties>
+      </component>
+      <component id="e38e7" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Rounded MT Bold" size="18"/>
+          <foreground color="1207959551"/>
+          <text value="ID:"/>
+        </properties>
+      </component>
+      <component id="38151" class="javax.swing.JLabel" binding="idAvenger">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial Rounded MT Bold" size="18"/>
+          <foreground color="1207959551"/>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
