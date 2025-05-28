@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.util.LinkedList;
 
 public class SistemaAvengers {
@@ -28,7 +29,7 @@ public class SistemaAvengers {
         JOptionPane.showMessageDialog(null, nuevoAvenger.getNombre() + " agregado con exito!"); //aviso de despliegue exitoso
     }
 
-    //metodo para modificar informacion de un avenger (nombre, mision, descripcion, nivel de peligro y mensual)
+    //metodo para modificar informacion de un avenger (nombre, mision, descripcion, nivel de peligro y mensual) APERTURA DE FORM!!!!!!!!!!!!
     ModifForm modificar = new ModifForm(this);
     public Avenger modificarAvenger(int id){
         boolean avengerEncontrado = false;
@@ -69,7 +70,7 @@ public class SistemaAvengers {
     public void modificarAvenger(int id, JTextField nombre, JTextField mision, JTextField descripcion, JComboBox peligro, JTextField mensual){
         boolean avengerEncontrado = false;
         for (Avenger i : avengers){
-            if (i.getId() == id){
+            if (i.getId() == id && Double.parseDouble(mensual.getText()) >= 0){
                 avengerEncontrado = true;
 
                 i.setNombre(modificar.getNombre().getText()); //nombre
@@ -78,21 +79,23 @@ public class SistemaAvengers {
                 Pago modPago = new Pago(0, null, null, null);
                 i.setPago(modPago.pagoAvenger(Double.parseDouble(modificar.getMensual().getText()))); //pago
                 break;
-            }else {avengerEncontrado = false;}
+            }else {JOptionPane.showMessageDialog(null, "Revise su informacion!") ;avengerEncontrado = false;}
         }
 
         if (avengerEncontrado){
             JOptionPane.showMessageDialog(null, "Modificacion exitosa!");
             main.refresh(main.avengersEnMision);
-        }else {JOptionPane.showMessageDialog(null, "No se encontro un Avenger con tal ID!");}
+        }else {JOptionPane.showMessageDialog(null, "Algo salio mal, intente de nuevo!");}
     }
 
-    //metodo para enlistar en tiempo real los avengers en mision
-    public void listarAvenger(JTextArea cont){
+    //metodo para enlistar en tiempo real los avengers en una tabla
+    public void listarAvenger(JTable tabla){
+        DefaultTableModel modelo = new DefaultTableModel(new Object[]{"ID", "Nombre", "Mision", "Nivel de peligrosidad"}, 0);
+        modelo.addRow(new Object[]{"ID", "Nombre", "Mision", "Nivel de peligrosidad"});
         //para tener mayor personalizacion, se agregaran simbolos de acuerdo al avenger ingresado
-        for (Avenger i : avengers){
+        for (Avenger i : avengers) {
             //SPIDERMAN
-            if (i.getNombre().equalsIgnoreCase("Spiderman") || i.getNombre().equalsIgnoreCase("Peter Parker")){
+            if (i.getNombre().equalsIgnoreCase("Spiderman") || i.getNombre().equalsIgnoreCase("Peter Parker")) {
                 i.setNombre("Spiderman \uD83D\uDD78\uFE0F");
             }
 
@@ -133,11 +136,14 @@ public class SistemaAvengers {
 
             // IRON MAN
             if (i.getNombre().equalsIgnoreCase("Iron Man") || i.getNombre().equalsIgnoreCase("Tony Stark")) {
-                i.setNombre("Iron Man ⎊");;
+                i.setNombre("Iron Man ⎊");
+                ;
             }
 
-            cont.setText(cont.getText() + i.getNombre() + " | " + i.getId() + "\n" + i.getMision().getNombreMision() + "\n-------------------------------------------------------------------\n");
+
+            modelo.addRow(new Object[]{i.getId(), i.getNombre(), i.getMision().getNombreMision(), i.getMision().getNivelPeligrosidad()});
         }
+        main.table.setModel(modelo);
     }
 
     //metodo para eliminar un avenger de la lista de desplegado mediante id

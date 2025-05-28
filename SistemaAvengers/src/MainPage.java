@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.LinkedList;
 
 public class MainPage {
     private JPanel pGeneral;
@@ -10,6 +9,7 @@ public class MainPage {
     private JButton eliminarButton;
     JTextArea avengersEnMision;
     private JButton informeButton;
+    JTable table;
     private JButton buscarButton;
 
     SistemaAvengers sistema = new SistemaAvengers(this);
@@ -30,23 +30,35 @@ public class MainPage {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String input = JOptionPane.showInputDialog("Ingresa la identificacion del Avenger:"); //ingreso de id del avenger a eliminar
-                sistema.eliminarAvenger(Integer.parseInt(input));
-                refresh(avengersEnMision);
+                try {
+                    sistema.eliminarAvenger(Integer.parseInt(input));
+                    refresh(avengersEnMision);
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "La ID es de valor numerico!");
+                }
             }
         });
         informeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String input = JOptionPane.showInputDialog("Ingresa la identificacion del Avenger:");
-                sistema.emitirInforme(Integer.parseInt(input));
+                try {
+                    sistema.emitirInforme(Integer.parseInt(input));
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Debe ingresar un valor numerico donde corresponda!");
+                }
             }
         });
         modificarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String input = JOptionPane.showInputDialog("Ingresa la identificacion del Avenger:");
-                Avenger avengerModificado = new Avenger(0, null, null, null);
-                sistema.modificarAvenger(Integer.parseInt(input));
+                try {
+                    Avenger avengerModificado = new Avenger(0, null, null, null);
+                    sistema.modificarAvenger(Integer.parseInt(input));
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "La ID es de valor numerico!");
+                }
             }
         });
     }
@@ -61,7 +73,6 @@ public class MainPage {
 
     //refrescar la lista de avengers
     public void refresh(JTextArea cont){
-        cont.setText("");
-        sistema.listarAvenger(avengersEnMision);
+        sistema.listarAvenger(table);
     }
 }

@@ -22,7 +22,11 @@ public class ModifForm {
         guardarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                sistema.modificarAvenger(Integer.parseInt(idAvenger.getText()), nombre, mision, descripcion, peligro, mensual);
+                try {
+                    sistema.modificarAvenger(Integer.parseInt(idAvenger.getText()), nombre, mision, descripcion, peligro, mensual);
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "La ID es de valor numerico!");
+                }
             }
         });
     }
